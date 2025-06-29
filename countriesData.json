@@ -1,0 +1,31 @@
+{
+  "servers": {
+    "1384136633800069191": {
+      "country": "نیگا اباد",
+      "leader": "1374080838882300114",
+      "ministers": [],
+      "customJobs": {
+        "leader": "رهبر",
+        "minister": "وزیر",
+        "general": "ژنرال",
+        "symbolicLeader": {
+          "name": "نامشخص",
+          "user": "1374080838882300114"
+        }
+      },
+      "ideology": "نیگریسم",
+      "currency": "نیگر",
+      "taxRate": 0.1,
+      "citizens": [
+        "1374080838882300114",
+        "1380825484861898833"
+      ],
+      "armySize": 0,
+      "factories": 0,
+      "landArea": 1000,
+      "flagImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&",
+      "symbolImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&",
+      "currencyImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&"
+    }
+  }
+}

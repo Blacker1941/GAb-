@@ -1,0 +1,25 @@
+{
+  "name": "blackerism-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "canvacord": "^6.0.2",
+    "canvas": "^3.1.0",
+    "chart.js": "^4.4.9",
+    "chartjs-chart-financial": "^0.2.1",
+    "chartjs-node-canvas": "^5.0.0",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "quickchart-js": "^3.1.3"
+  }
+}

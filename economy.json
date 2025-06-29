@@ -1,0 +1,304 @@
+{
+  "1374080838882300114": {
+    "wallet": 582.8000000000002,
+    "bank": 15,
+    "jobCooldown": 1749640815763,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": "technology",
+    "branchLevel": 100,
+    "lastWorkTime": 1751105801760,
+    "lastUpgradeTime": 1750083898593,
+    "forex": {
+      "gold": 132,
+      "oil": 270,
+      "نیگر": 0,
+      "diamond": 1
+    },
+    "forexBuyInfo": {
+      "oil": {
+        "totalAmount": 269,
+        "totalSpent": 20713
+      },
+      "gold": {
+        "totalAmount": 1,
+        "totalSpent": 104
+      },
+      "diamond": {
+        "totalAmount": 1,
+        "totalSpent": 294
+      }
+    },
+    "wallet1384136633800069191": 0
+  },
+  "1206200704809697302": {
+    "wallet": 259,
+    "bank": 0,
+    "jobCooldown": 1749658988216,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1174435128915804161": {
+    "wallet": 100,
+    "bank": 0,
+    "jobCooldown": 1749641015880,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1142492346685075536": {
+    "wallet": 1,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1131451952472018954": {
+    "wallet": 222,
+    "bank": 0,
+    "jobCooldown": 1749659495842,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1749938386778
+  },
+  "537627586168356865": {
+    "wallet": 1,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "951435308426219520": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1164908100977967235": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "768505809595531284": {
+    "wallet": 1,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "889624108256620574": {
+    "wallet": 2,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "969548669688873000": {
+    "wallet": 39,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1073991297725104229": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1238871264916017193": {
+    "wallet": 95435173,
+    "bank": 13000,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": "military",
+    "branchLevel": 100,
+    "lastWorkTime": 1750006446767,
+    "lastUpgradeTime": 1750006407587
+  },
+  "1350070343938740229": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1120789370723639376": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1313491357616050238": {
+    "wallet": 96678195,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": "politics",
+    "branchLevel": 91,
+    "lastWorkTime": 1750009853481,
+    "lastUpgradeTime": 1750009824874
+  },
+  "1265667005948891222": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1284057403314409525": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "job": 0,
+    "jobBranch": null,
+    "branchLevel": 0
+  },
+  "1212079179068215347": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1156835149925851136": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1372869897595392011": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "439570562608660491": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1268532077498994732": {
+    "wallet": 8,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1749911413879
+  },
+  "711422694209486860": {
+    "wallet": 18,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1749915966587
+  },
+  "1308638122774495313": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "747025723159478302": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "890142728896278558": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1382311455906332692": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1380580134054265036": {
+    "wallet": 10000,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1199584195631132797": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1080837534805921814": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1308531292673146997": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1339314820243132466": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "872443887170486292": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1380825484861898833": {
+    "wallet": 11,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "jobBranch": "politics",
+    "branchLevel": 1,
+    "customJob": "عا",
+    "wallet1384136633800069191": 14
+  }
+}
