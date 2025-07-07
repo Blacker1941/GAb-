@@ -1,8 +1,8 @@
 {
   "servers": {
-    "1384136633800069191": {
-      "country": "نیگا اباد",
-      "leader": "1374080838882300114",
+    "1301233989964660736": {
+      "country": "گنگ ادمین",
+      "leader": "1238871264916017193",
       "ministers": [],
       "customJobs": {
         "leader": "رهبر",
@@ -10,22 +10,104 @@
         "general": "ژنرال",
         "symbolicLeader": {
           "name": "نامشخص",
-          "user": "1374080838882300114"
+          "user": "1238871264916017193"
         }
       },
-      "ideology": "نیگریسم",
-      "currency": "نیگر",
+      "ideology": "پادشاهی مشروطه",
+      "currency": "",
+      "taxRate": 0,
+      "citizens": [],
+      "armySize": 0,
+      "factories": 0,
+      "landArea": 1000,
+      "flagImage": "",
+      "symbolImage": "",
+      "currencyImage": "",
+      "economicActivity": {
+        "transactionCount": 0,
+        "workCount": 1
+      },
+      "isMain": true
+    },
+    "1389177102435225630": {
+      "country": "Bulgaria",
+      "leader": "1313491357616050238",
+      "ministers": [],
+      "customJobs": {
+        "leader": "رهبر",
+        "minister": "وزیر",
+        "general": "ژنرال",
+        "symbolicLeader": {
+          "name": "شاهنشاه لمستون",
+          "user": "1313491357616050238"
+        }
+      },
+      "ideology": "Monarchy",
+      "currency": "Lev",
       "taxRate": 0.1,
       "citizens": [
-        "1374080838882300114",
-        "1380825484861898833"
+        "1313491357616050238"
       ],
       "armySize": 0,
       "factories": 0,
       "landArea": 1000,
-      "flagImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&",
-      "symbolImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&",
-      "currencyImage": "https://cdn.discordapp.com/attachments/1376900355027243050/1383439679730221096/russian-federation-1-chervontsev---lenin---1937---f---p202-p-image-131096-grande-1.jpg?ex=685fef9a&is=685e9e1a&hm=82982400a3e68d2c7ff0d535dcf1601763ed4718f648cedd9cc84ecfb5e0a10a&"
+      "symbolImage": "https://uploadkon.ir/uploads/862d30_25Neshan-Mli.png",
+      "currencyImage": "https://uploadkon.ir/uploads/bea330_25lie.jpg",
+      "discordLink": "https://discord.gg/SBgDbWT7Px",
+      "economicActivity": {
+        "transactionCount": 0,
+        "workCount": 2
+      }
+    },
+    "1349378271061479474": {
+      "country": "کانادا",
+      "leader": "1132350518522560522",
+      "ministers": [],
+      "customJobs": {
+        "leader": "رهبر",
+        "minister": "وزیر",
+        "general": "ژنرال",
+        "symbolicLeader": {
+          "name": "Charles III",
+          "user": "1132350518522560522"
+        }
+      },
+      "ideology": "آزادی، برابری، صلح، رفاه همگانی، چندفرهنگی، پیشرفت علمی، حقوق بشر",
+      "currency": "دلار کانادا (CAD)",
+      "taxRate": 0.1,
+      "citizens": [
+        "1132350518522560522"
+      ],
+      "armySize": 0,
+      "factories": 0,
+      "landArea": 1000,
+      "symbolImage": "https://cdn.discordapp.com/attachments/1389099324109230202/1389100238127632436/Coat_of_arms_of_Canada_rendition.svg.png?ex=686363e9&is=68621269&hm=2d43a6978e44c6e18ed880a80371d592442bc98e17d2cd900e83ef42902c2e2f&",
+      "flagImage": "https://cdn.discordapp.com/attachments/1379104450937098260/1389266904706711572/17013016292154105527199811011632017236124.jpg?ex=6863ff21&is=6862ada1&hm=645f1fa027a9e241ce4ecafb590519cf4040114dfa071a6c65ffec820cb325f9&",
+      "currencyImage": "https://cdn.discordapp.com/attachments/1379104450937098260/1389267497559265360/Screenshot_2025-06-30-19-02-29-914_com.openai.chatgpt-edit.jpg?ex=6863ffae&is=6862ae2e&hm=1ca03522893057ccbf7e23412414d73c70b6c02597a80bea20d80ad7123bc492&",
+      "discordLink": "https://discord.gg/TySnGJ5f",
+      "economicActivity": {
+        "transactionCount": 0,
+        "workCount": 1
+      }
+    },
+    "1190367323643711608": {
+      "country": "پادشاهی ایتالیا اسپانیا",
+      "leader": "1350070343938740229",
+      "ministers": [],
+      "customJobs": {
+        "leader": "رهبر",
+        "minister": "وزیر",
+        "general": "ژنرال"
+      },
+      "ideology": "پادشاهی",
+      "currency": "یورو",
+      "taxRate": 0.1,
+      "citizens": [
+        "1350070343938740229"
+      ],
+      "armySize": 0,
+      "factories": 0,
+      "landArea": 1000
     }
   }
 }

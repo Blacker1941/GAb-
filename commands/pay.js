@@ -205,7 +205,7 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
     const attachment = new AttachmentBuilder(buffer, { name: 'paycheck.png' });
 
     await interaction.editReply({
-      content: `✅ انتقال ${amount} <:lenin:1383454156840370236> انجام شد از ${interaction.user} به ${targetUser}.`,
+      content: `✅ انتقال ${amount} <:WorldDollar:1391358868142948453> انجام شد از ${interaction.user} به ${targetUser}.`,
       files: [attachment]
     });
   } catch (error) {

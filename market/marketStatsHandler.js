@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 
 import path from 'path';
 
-const FILE_PATH = path.join(process.cwd(), 'marketStats.json');
+const FILE_PATH = path.join(process.cwd(), './marketStats.json');
 
 export let marketStats = {
 

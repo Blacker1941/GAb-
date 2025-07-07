@@ -2,16 +2,26 @@ import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import fs from 'fs/promises';
 
 export const data = new SlashCommandBuilder()
-  .setName('wallet') // یا .setName('ولت')
-  .setDescription('👛 نمایش دارایی‌های فارکس شما با قیمت لحظه‌ای');
+  .setName('wallet')
+  .setDescription('👛 نمایش دارایی‌های فارکس با قیمت لحظه‌ای')
+  .addUserOption(option =>
+    option.setName('user')
+      .setDescription('کاربری که می‌خواهی ولتش رو ببینی')
+      .setRequired(false));
 
 export async function execute(interaction) {
   await interaction.deferReply();
 
-  const userId = interaction.user.id;
+  const targetUser = interaction.options.getUser('user') || interaction.user;
+
+  // جلوگیری از مشاهده ولت ربات‌ها
+  if (targetUser.bot) {
+    return await interaction.editReply('🤖 نمی‌توان ولت ربات‌ها را مشاهده کرد.');
+  }
+
+  const userId = targetUser.id;
 
   try {
-    // لود اطلاعات کاربران و بازار
     const [usersRaw, marketRaw] = await Promise.all([
       fs.readFile('economy.json', 'utf8'),
       fs.readFile('market.json', 'utf8')
@@ -23,20 +33,20 @@ export async function execute(interaction) {
     const user = users[userId];
 
     if (!user || !user.forex) {
-      return await interaction.editReply('📭 شما هیچ دارایی فارکس ندارید.');
+      return await interaction.editReply(`📭 ${targetUser.username} هیچ دارایی فارکس ندارد.`);
     }
 
     const forex = user.forex;
     let totalValue = 0;
 
     const embed = new EmbedBuilder()
-      .setTitle(`👛 دارایی‌های فارکس ${interaction.user.username}`)
+      .setTitle(`👛 دارایی‌های فارکس ${targetUser.username}`)
       .setColor(0x00cc99)
       .setTimestamp();
 
     for (const item in forex) {
       const amount = forex[item];
-      if (amount <= 0) continue;  // فقط نمایش دارایی‌هایی که مقدارشون بزرگ‌تر از صفره
+      if (amount <= 0) continue;
 
       const price = market[item]?.price || 0;
       const value = amount * price;
@@ -57,14 +67,14 @@ export async function execute(interaction) {
 
       embed.addFields({
         name: `💱 ${item.toUpperCase()}`,
-        value: `تعداد: **${amount}**\nقیمت فعلی: **${price}**\nارزش: **${value}**\n${profitText}`,
+        value: `تعداد: **${amount}**\nقیمت فعلی: **${price}**\nارزش: **${value.toFixed(2)}**\n${profitText}`,
         inline: true
       });
     }
 
     embed.addFields({
       name: '💰 مجموع ارزش فارکس',
-      value: `**${totalValue}**`,
+      value: `**${totalValue.toFixed(2)}**`,
       inline: false
     });
 

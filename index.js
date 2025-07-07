@@ -123,8 +123,10 @@ client.slashCommands = new Collection();
 // آماده شدن ربات
 client.once('ready', () => {
   console.log(`✅ ربات فعال شد: ${client.user.tag}`);
-  setInterval(() => updateMarketPrices(economy, countryData), 60 * 60 * 1000); // هر یک ساعت قیمت‌ها آپدیت میشه
+  updateMarketPrices(economy, countryData); // اجرای اولیه
+  setInterval(() => updateMarketPrices(economy, countryData), 24 * 60 * 60 * 1000); // هر ۲۴ ساعت
 });
+
 
 // هندل پیام‌های متنی (اختیاری)
 client.on('messageCreate', async message => {

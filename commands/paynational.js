@@ -52,10 +52,8 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
       return await interaction.editReply({ content: '❌ خطا در دریافت اطلاعات حساب کاربری.', ephemeral: true });
     }
 
-    // بارگذاری اطلاعات کشورها
     const countryData = await loadCountryData();
 
-    // پیدا کردن کشور ارسال‌کننده
     let senderServerId = null;
     for (const id in countryData.servers) {
       if (countryData.servers[id].citizens.includes(senderId)) {
@@ -64,7 +62,6 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
       }
     }
 
-    // پیدا کردن کشور گیرنده
     let targetServerId = null;
     for (const id in countryData.servers) {
       if (countryData.servers[id].citizens.includes(targetUser.id)) {
@@ -87,28 +84,32 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
 
     const senderServer = countryData.servers[senderServerId];
     const senderWalletKey = 'wallet' + senderServerId;
+    const currencyName = senderServer.currency || 'پول ملی';
+    const currencyKey = currencyName.toLowerCase();
 
     if (!economy[senderId][senderWalletKey] || economy[senderId][senderWalletKey] < amount) {
-      return await interaction.editReply({ content: `❌ موجودی کافی ${senderServer.currency || 'پول ملی'} ندارید.`, ephemeral: true });
-    }
-
-    if (!economy[targetUser.id][senderWalletKey]) {
-      economy[targetUser.id][senderWalletKey] = 0;
+      return await interaction.editReply({ content: `❌ موجودی کافی ${currencyName} ندارید.`, ephemeral: true });
     }
 
     economy[senderId][senderWalletKey] -= amount;
-    economy[targetUser.id][senderWalletKey] += amount;
+    economy[targetUser.id][senderWalletKey] = (economy[targetUser.id][senderWalletKey] || 0) + amount;
+
+    // 🔁 افزودن تأثیر اقتصادی روی بازار فارکس
+    economy[senderId].forex = economy[senderId].forex || {};
+    economy[targetUser.id].forex = economy[targetUser.id].forex || {};
+
+    economy[senderId].forex[currencyKey] = (economy[senderId].forex[currencyKey] || 0) - amount;
+    economy[targetUser.id].forex[currencyKey] = (economy[targetUser.id].forex[currencyKey] || 0) + amount;
 
     await saveEconomy();
 
-    // تولید تصویر چک با نماد و واحد پول کشور
+    // 🎨 ساخت چک گرافیکی
     async function generatePayCheck() {
       const width = 900;
       const height = 450;
       const canvas = Canvas.createCanvas(width, height);
       const ctx = canvas.getContext('2d');
 
-      // پس‌زمینه کاغذی
       ctx.fillStyle = '#f9f4e7';
       ctx.fillRect(0, 0, width, height);
 
@@ -161,7 +162,6 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
       ctx.fillText(`پرداخت کننده: ${interaction.user.username}#${interaction.user.discriminator}`, width - 50, 180);
       ctx.fillText(`دریافت کننده: ${targetUser.username}#${targetUser.discriminator}`, width - 50, 230);
 
-      ctx.fillStyle = '#5a3e2b';
       ctx.font = 'bold 48px Tahoma';
       ctx.textAlign = 'left';
       ctx.fillText('مبلغ:', 50, 320);
@@ -198,40 +198,36 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
       ctx.font = 'italic 22px Tahoma';
       ctx.fillText('مهر', width - 100, height - 90);
 
-
       const stampPath = path.join(process.cwd(), 'img', '13.png');
       const stampBuffer = await fs.readFile(stampPath);
       const stampImage = await Canvas.loadImage(stampBuffer);
       ctx.drawImage(stampImage, width - 190, height - 130, 80, 80);
-      
-      
+
       try {
         const senderAvatarUrl = interaction.user.displayAvatarURL({ extension: 'png', size: 256 });
         const senderBuf = Buffer.from(await (await fetch(senderAvatarUrl)).arrayBuffer());
         const senderAvatar = await Canvas.loadImage(senderBuf);
         ctx.save();
         ctx.beginPath();
-        ctx.arc(110, 95, 60, 0, Math.PI * 2); 
+        ctx.arc(110, 95, 60, 0, Math.PI * 2);
         ctx.closePath();
         ctx.clip();
-        ctx.drawImage(senderAvatar, 50, 38, 120, 120); // Y از 40 به 38 تغییر کرد
+        ctx.drawImage(senderAvatar, 50, 38, 120, 120);
         ctx.restore();
       } catch {}
-      
-      
+
       try {
         const targetAvatarUrl = targetUser.displayAvatarURL({ extension: 'png', size: 256 });
         const targetBuf = Buffer.from(await (await fetch(targetAvatarUrl)).arrayBuffer());
         const targetAvatar = await Canvas.loadImage(targetBuf);
         ctx.save();
         ctx.beginPath();
-        ctx.arc(width - 110, 95, 60, 0, Math.PI * 2); 
+        ctx.arc(width - 110, 95, 60, 0, Math.PI * 2);
         ctx.closePath();
         ctx.clip();
-        ctx.drawImage(targetAvatar, width - 170, 38, 120, 120); // Y از 40 به 38 تغییر کرد
+        ctx.drawImage(targetAvatar, width - 170, 38, 120, 120);
         ctx.restore();
       } catch {}
-      
 
       return canvas.toBuffer();
     }
@@ -240,7 +236,7 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
     const attachment = new AttachmentBuilder(buffer, { name: 'paynational.png' });
 
     await interaction.editReply({
-      content: `✅ انتقال موفقیت‌آمیز ${amount} ${senderServer.currency || 'پول ملی'} از ${interaction.user} به ${targetUser} انجام شد.`,
+      content: `✅ انتقال موفقیت‌آمیز ${amount} ${currencyName} از ${interaction.user} به ${targetUser} انجام شد.`,
       files: [attachment]
     });
 

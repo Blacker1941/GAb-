@@ -1,24 +1,19 @@
 import { SlashCommandBuilder } from 'discord.js';
 import fs from 'fs/promises';
 
-const filePath = './countriesData.json';
+const countryPath = './countriesData.json';
+const economyPath = './economy.json';
 
 export const data = new SlashCommandBuilder()
   .setName('setgovernment')
-  .setDescription('🏛️ تنظیم پست‌های دولت و رهبر نمادین کشور (فقط توسط اونر)')
-  .addStringOption(option =>
-    option.setName('leadername')
-      .setDescription('نام دلخواه رهبر نمادین (مثلاً پادشاه، ولی‌فقیه...)')
-      .setRequired(false))
-  .addUserOption(option =>
-    option.setName('leader')
-      .setDescription('شخص رهبر نمادین')
-      .setRequired(false))
-  .addStringOption(option => option.setName('navyname').setDescription('نام دلخواه ژنرال نیروی دریایی'))
+  .setDescription('🏛️ تنظیم پست‌های دولت و رهبر نمادین کشور (فقط توسط اونر کشور)')
+  .addStringOption(option => option.setName('leadername').setDescription('نام رهبر نمادین'))
+  .addUserOption(option => option.setName('leader').setDescription('کاربر رهبر نمادین'))
+  .addStringOption(option => option.setName('navyname').setDescription('نام ژنرال نیروی دریایی'))
   .addUserOption(option => option.setName('navyuser').setDescription('کاربر ژنرال نیروی دریایی'))
-  .addStringOption(option => option.setName('airforcename').setDescription('نام دلخواه ژنرال هوایی'))
+  .addStringOption(option => option.setName('airforcename').setDescription('نام ژنرال هوایی'))
   .addUserOption(option => option.setName('airforceuser').setDescription('کاربر ژنرال هوایی'))
-  .addStringOption(option => option.setName('landforcename').setDescription('نام دلخواه ژنرال زمینی'))
+  .addStringOption(option => option.setName('landforcename').setDescription('نام ژنرال زمینی'))
   .addUserOption(option => option.setName('landforceuser').setDescription('کاربر ژنرال زمینی'))
   .addStringOption(option => option.setName('foreignname').setDescription('نام وزیر خارجه'))
   .addUserOption(option => option.setName('foreignuser').setDescription('کاربر وزیر خارجه'))
@@ -36,32 +31,39 @@ export async function execute(interaction) {
   const userId = interaction.user.id;
 
   try {
-    const guildOwner = await interaction.guild.fetchOwner();
-    if (userId !== guildOwner.id) {
-      return await interaction.reply({ content: '❌ فقط اونر سرور می‌تونه دولت را تنظیم کنه.', ephemeral: true });
+    await interaction.deferReply({ ephemeral: true }); // جلوگیری از تایم‌اوت
+
+    const rawCountry = await fs.readFile(countryPath, 'utf8');
+    const rawEconomy = await fs.readFile(economyPath, 'utf8');
+    const countries = JSON.parse(rawCountry);
+    const economy = JSON.parse(rawEconomy);
+
+    const country = countries.servers[serverId];
+    if (!country) {
+      return await interaction.editReply({ content: '❌ این سرور هیچ کشوری نداره.' });
     }
 
-    // بارگذاری
-    let raw = await fs.readFile(filePath, 'utf8');
-    let data = JSON.parse(raw);
-
-    const country = data.servers[serverId];
-    if (!country) {
-      return await interaction.reply({ content: '❌ این سرور هیچ کشوری نداره.', ephemeral: true });
+    // چک کردن که کاربر لیدر کشور هست (اونر کشور)
+    if (userId !== country.leader) {
+      return await interaction.editReply({ content: '❌ فقط رهبر کشور می‌تونه دولت را تنظیم کند.' });
     }
 
     country.customJobs = country.customJobs || {};
 
-    // helper برای ثبت یک پست
     const setJob = (key, name, user) => {
       if (!name && !user) return;
+
       country.customJobs[key] = {
         name: name || country.customJobs[key]?.name || 'نامشخص',
         user: user?.id || country.customJobs[key]?.user || null
       };
+
+      if (user?.id) {
+        economy[user.id] = economy[user.id] || {};
+        economy[user.id].customJob = name;
+      }
     };
 
-    // تنظیم پست‌ها
     setJob('symbolicLeader', interaction.options.getString('leadername'), interaction.options.getUser('leader'));
     setJob('navy', interaction.options.getString('navyname'), interaction.options.getUser('navyuser'));
     setJob('airforce', interaction.options.getString('airforcename'), interaction.options.getUser('airforceuser'));
@@ -72,11 +74,16 @@ export async function execute(interaction) {
     setJob('management', interaction.options.getString('managementname'), interaction.options.getUser('managementuser'));
     setJob('education', interaction.options.getString('educationname'), interaction.options.getUser('educationuser'));
 
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
-    await interaction.reply('✅ دولت با موفقیت تنظیم شد.');
+    await fs.writeFile(countryPath, JSON.stringify(countries, null, 2));
+    await fs.writeFile(economyPath, JSON.stringify(economy, null, 2));
 
+    await interaction.editReply('✅ پست‌های دولتی تنظیم و به عنوان شغل سفارشی ثبت شدند.');
   } catch (err) {
     console.error('❌ خطا در setgovernment:', err);
-    await interaction.reply({ content: '❌ خطایی در تنظیم دولت رخ داد.', ephemeral: true });
+    try {
+      await interaction.editReply({ content: '❌ خطایی در تنظیم دولت رخ داد.' });
+    } catch (editError) {
+      console.error('❌ خطا در ارسال پیام خطا:', editError);
+    }
   }
 }

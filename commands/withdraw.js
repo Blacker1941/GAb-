@@ -31,7 +31,7 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
 
     await saveEconomy();
 
-    await interaction.reply({ content: `✅ مبلغ ${amount} <:lenin:1383454156840370236> با موفقیت از بانک برداشت شد.`, ephemeral: true });
+    await interaction.reply({ content: `✅ مبلغ ${amount} <:WorldDollar:1391358868142948453> با موفقیت از بانک برداشت شد.`, ephemeral: true });
   } catch (error) {
     console.error('Error in withdraw command:', error);
     await interaction.reply({ content: '❌ خطایی در پردازش درخواست شما رخ داده است.', ephemeral: true });

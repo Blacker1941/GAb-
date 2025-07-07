@@ -8,10 +8,15 @@ import fs from 'fs/promises';
 
 const WORK_COOLDOWN_MS = 1 * 60 * 60 * 1000; // 1 ساعت
 
+const COUNTRY_PATH = path.join(process.cwd(), 'countriesData.json');
+
 async function loadCountryData() {
-  const filePath = path.join(process.cwd(), 'countriesData.json');
-  const jsonString = await fs.readFile(filePath, 'utf-8');
+  const jsonString = await fs.readFile(COUNTRY_PATH, 'utf-8');
   return JSON.parse(jsonString);
+}
+
+async function saveCountryData(data) {
+  await fs.writeFile(COUNTRY_PATH, JSON.stringify(data, null, 2), 'utf-8');
 }
 
 export const data = new SlashCommandBuilder()
@@ -20,7 +25,6 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction, economy, saveEconomy, ensureUser) {
   try {
-    // حتماً deferReply بزن تا interaction منقضی نشه
     await interaction.deferReply();
 
     const userId = interaction.user.id;
@@ -73,27 +77,35 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
     }
 
     const earnings = Math.floor(Math.random() * (jobData.max - jobData.min + 1)) + jobData.min;
-
-    let currencyName = 'ارز';
+    let currencyName = '<:WorldDollar:1391358868142948453>';
 
     if (userServerId) {
       const walletKey = `wallet${userServerId}`;
-      const countryCurrency = countryData.servers[userServerId].currency || '<:lenin:1383454156840370236>';
+      const country = countryData.servers[userServerId];
+      const countryCurrency = country.currency || '<:WorldDollar:1391358868142948453>';
       currencyName = countryCurrency;
 
       economy[userId][walletKey] = (economy[userId][walletKey] || 0) + earnings;
 
-      // اضافه کردن به فارکس همزمان
+      // اضافه به فارکس
       economy[userId].forex = economy[userId].forex || {};
       const currLower = countryCurrency.toLowerCase();
       economy[userId].forex[currLower] = (economy[userId].forex[currLower] || 0) + earnings;
 
+      // ✅ افزایش فعالیت اقتصادی - تعداد کارها
+      countryData.servers[userServerId].economicActivity = countryData.servers[userServerId].economicActivity || {
+        transactionCount: 0,
+        workCount: 0
+      };
+
+      countryData.servers[userServerId].economicActivity.workCount += 1;
+
+      await saveCountryData(countryData);
     } else {
       economy[userId].wallet = (economy[userId].wallet || 0) + earnings;
     }
 
     economy[userId].lastWorkTime = now;
-
     await saveEconomy();
 
     const jobTitle = economy[userId].customJob || jobData.name;

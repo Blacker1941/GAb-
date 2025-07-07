@@ -1,35 +1,36 @@
 {
   "1374080838882300114": {
-    "wallet": 582.8000000000002,
-    "bank": 15,
+    "wallet": 153.19229999999516,
+    "bank": 0,
     "jobCooldown": 1749640815763,
     "inventory": [],
     "job": 0,
     "jobBranch": "technology",
     "branchLevel": 100,
-    "lastWorkTime": 1751105801760,
-    "lastUpgradeTime": 1750083898593,
+    "lastWorkTime": 1751817005852,
+    "lastUpgradeTime": 1750064784393,
+    "customJob": "موهندس اعظم بلکر",
     "forex": {
-      "gold": 132,
-      "oil": 270,
-      "نیگر": 0,
-      "diamond": 1
+      "gold": 742,
+      "oil": 0,
+      "diamond": 0,
+      "کفتر": 0,
+      "toman": 0,
+      "دلار کانادا (cad)": 1,
+      "lev": 0
     },
+    "wallet1375907052651810976": 9680,
     "forexBuyInfo": {
-      "oil": {
-        "totalAmount": 269,
-        "totalSpent": 20713
+      "دلار کانادا (cad)": {
+        "totalAmount": 1,
+        "totalSpent": 0.1
       },
       "gold": {
-        "totalAmount": 1,
-        "totalSpent": 104
-      },
-      "diamond": {
-        "totalAmount": 1,
-        "totalSpent": 294
+        "totalAmount": 742,
+        "totalSpent": 247828
       }
     },
-    "wallet1384136633800069191": 0
+    "wallet1389177102435225630": 100
   },
   "1206200704809697302": {
     "wallet": 259,
@@ -50,13 +51,19 @@
     "branchLevel": 0
   },
   "1142492346685075536": {
-    "wallet": 1,
-    "bank": 0,
+    "wallet": 0,
+    "bank": 21548,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
-    "jobBranch": null,
-    "branchLevel": 0
+    "jobBranch": "military",
+    "branchLevel": 18,
+    "lastWorkTime": 1751469973460,
+    "lastUpgradeTime": 1751378997755,
+    "forex": {
+      "oil": 0,
+      "diamond": 0
+    }
   },
   "1131451952472018954": {
     "wallet": 222,
@@ -69,13 +76,14 @@
     "lastWorkTime": 1749938386778
   },
   "537627586168356865": {
-    "wallet": 1,
+    "wallet": 14,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
-    "jobBranch": null,
-    "branchLevel": 0
+    "jobBranch": "economy",
+    "branchLevel": 1,
+    "lastWorkTime": 1751060137909
   },
   "951435308426219520": {
     "wallet": 0,
@@ -114,42 +122,52 @@
     "branchLevel": 0
   },
   "969548669688873000": {
-    "wallet": 39,
+    "wallet": 4070,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
     "jobBranch": null,
-    "branchLevel": 0
+    "branchLevel": 0,
+    "forex": {
+      "gold": 15
+    },
+    "customJob": "بیزنس من"
   },
   "1073991297725104229": {
-    "wallet": 0,
+    "wallet": 10,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
-    "jobBranch": null,
-    "branchLevel": 0
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1750079585337
   },
   "1238871264916017193": {
-    "wallet": 95435173,
-    "bank": 13000,
+    "wallet": 4002012,
+    "bank": 2013000,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
     "jobBranch": "military",
     "branchLevel": 100,
-    "lastWorkTime": 1750006446767,
-    "lastUpgradeTime": 1750006407587
+    "lastWorkTime": 1751664831235,
+    "lastUpgradeTime": 1750006407587,
+    "customJob": "رهبره گنگ ادمین",
+    "forex": {
+      "gold": 590158
+    }
   },
   "1350070343938740229": {
-    "wallet": 0,
+    "wallet": 2507,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
-    "jobBranch": null,
-    "branchLevel": 0
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1751664546428
   },
   "1120789370723639376": {
     "wallet": 0,
@@ -161,24 +179,46 @@
     "branchLevel": 0
   },
   "1313491357616050238": {
-    "wallet": 96678195,
+    "wallet": 899448.3246,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
     "jobBranch": "politics",
-    "branchLevel": 91,
-    "lastWorkTime": 1750009853481,
-    "lastUpgradeTime": 1750009824874
+    "branchLevel": 92,
+    "lastWorkTime": 1751632405433,
+    "lastUpgradeTime": 1751004823866,
+    "forex": {
+      "gold": 0,
+      "lev": 8229
+    },
+    "wallet1389177102435225630": 32372,
+    "forexBuyInfo": {}
   },
   "1265667005948891222": {
-    "wallet": 0,
-    "bank": 0,
+    "wallet": 2571.784500000067,
+    "bank": 2333408,
     "jobCooldown": 0,
     "inventory": [],
     "job": 0,
-    "jobBranch": null,
-    "branchLevel": 0
+    "jobBranch": "politics",
+    "branchLevel": 56,
+    "lastWorkTime": 1751632357731,
+    "lastUpgradeTime": 1750149138303,
+    "forex": {
+      "oil": 0,
+      "diamond": 0,
+      "gold": 0,
+      "toman": 2,
+      "<:lenin:1383454156840370236>": 2626
+    },
+    "forexBuyInfo": {
+      "toman": {
+        "totalAmount": 2,
+        "totalSpent": 0.21550000000000002
+      }
+    },
+    "wallet1301233989964660736": 2626
   },
   "1284057403314409525": {
     "wallet": 0,
@@ -202,7 +242,7 @@
     "inventory": []
   },
   "1372869897595392011": {
-    "wallet": 0,
+    "wallet": 10,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": []
@@ -291,14 +331,763 @@
     "jobCooldown": 0,
     "inventory": []
   },
-  "1380825484861898833": {
-    "wallet": 11,
+  "898816077000216637": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1149017805493121024": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "931888354163834900": {
+    "wallet": 13,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1156878260542652477": {
+    "wallet": 13,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1230768011850547242": {
+    "wallet": 328,
     "bank": 0,
     "jobCooldown": 0,
     "inventory": [],
     "jobBranch": "politics",
+    "branchLevel": 5,
+    "lastWorkTime": 1750143190172,
+    "lastUpgradeTime": 1750143504754
+  },
+  "1356993053726081187": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "890899059752185907": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "438407677425614859": {
+    "wallet": 5786,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "jobBranch": "military",
+    "branchLevel": 2,
+    "lastWorkTime": 1751060772775,
+    "customJob": "رییس کشور",
+    "lastUpgradeTime": 1750950876500,
+    "wallet1361377391947284510": 11,
+    "forex": {
+      "toman": 11
+    }
+  },
+  "1149675794034069534": {
+    "wallet": 1000,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "jobBranch": "military",
+    "branchLevel": 1
+  },
+  "1384463091999309884": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "965557915610152990": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "999697439093178488": {
+    "wallet": 666,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1181690502899318785": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "876858165394812950": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1384553179815088220": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "237564729332203521": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1012719393270153236": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1078992402225823774": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1345826652650864840": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "919094274765778994": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1357352155098386492": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1366468086424928287": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1368755711856869407": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "887178099312164917": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1128589323319660615": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "537048020202815519": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1271812385526779947": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1169991815689154580": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1088499962750451733": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": []
+  },
+  "1132350518522560522": {
+    "wallet": 9,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "customJob": "Charles III",
+    "jobBranch": "politics",
     "branchLevel": 1,
-    "customJob": "عا",
-    "wallet1384136633800069191": 14
+    "lastWorkTime": 1751340414710,
+    "wallet1349378271061479474": 6,
+    "forex": {
+      "دلار کانادا (cad)": 6
+    }
+  },
+  "1269239241272070217": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1046438764425248828": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {
+      "toman": 6
+    },
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "wallet1361377391947284510": 6,
+    "lastWorkTime": 1751290793412
+  },
+  "1118571002436272218": {
+    "wallet": 211,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {
+      "oil": 0,
+      "gold": 0
+    },
+    "jobBranch": "military",
+    "branchLevel": 5,
+    "lastWorkTime": 1751182855106,
+    "lastUpgradeTime": 1751106484245
+  },
+  "1364327549295005796": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1113465385736491008": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1382791363556409415": {
+    "wallet": 36,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {},
+    "jobBranch": "technology",
+    "branchLevel": 2,
+    "lastWorkTime": 1751664714994,
+    "lastUpgradeTime": 1751664974535
+  },
+  "1376469982115790968": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "888905178101735484": {
+    "wallet": 215,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {},
+    "jobBranch": "military",
+    "branchLevel": 3,
+    "lastWorkTime": 1751012310212,
+    "lastUpgradeTime": 1750976306487,
+    "customJob": "LW"
+  },
+  "1152214252053090354": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1256576007725645898": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "717880083532087378": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "765921746301091861": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1365321208937189379": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1176187155907887114": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "911631401059758130": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "465960686149959680": {
+    "wallet": 676,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {},
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1751208591757
+  },
+  "1303551000795414600": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1380825484861898833": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1069576062150901790": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "345648992060833793": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1168379042400063548": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "973272101635104778": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1260667660941787156": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1129069566199345212": {
+    "wallet": 13,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {},
+    "jobBranch": "economy",
+    "branchLevel": 1,
+    "lastWorkTime": 1751290879882
+  },
+  "1189961371593478286": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1220401330896638072": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "892308404998123520": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1083740970937491456": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1348400567713534065": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "388791925874098177": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "823101705406906379": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "836955101612343348": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1341138054261510314": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1175414462145122305": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1261055203008843796": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1256012141463339039": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1389212087615619144": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1389202385821372501": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1205141148574683188": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1185106210765152297": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "798145000742846475": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1335254763079729192": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1157715499346567278": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1389381415501565962": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1331654084515860627": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1336921699618131992": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1151063251526893660": {
+    "wallet": 10,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {},
+    "jobBranch": "military",
+    "branchLevel": 1,
+    "lastWorkTime": 1751798171208
+  },
+  "1117441293535162388": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1184863813829394523": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "702271082576740414": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "832969137940070450": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1136994023240896512": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1011724494022377565": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1344336143491268638": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1317428687141994508": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1002100534620192788": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1264221054226927718": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1263905646244528138": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1134568989113200740": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1281269122864517276": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1309244991289294858": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "709383602709987478": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "202538185845243904": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1279484487553515540": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "819100020367163412": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "189822049907113994": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "901487171226206219": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1219931157743796255": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1339712777715187829": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1346929480068763649": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1192941383472918589": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1200808322761244802": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "295627478146351104": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "901678348177117194": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
+  },
+  "1391407026663592007": {
+    "wallet": 0,
+    "bank": 0,
+    "jobCooldown": 0,
+    "inventory": [],
+    "forex": {}
   }
 }

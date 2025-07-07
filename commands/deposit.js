@@ -38,5 +38,5 @@ export async function execute(interaction, economy, saveEconomy) {
   await saveEconomy();
 
   // ارسال پاسخ نهایی
-  await interaction.reply(`✅ ${amount} <:lenin:1383454156840370236> با موفقیت به بانک واریز شد.`);
+  await interaction.reply(`✅ ${amount} <:WorldDollar:1391358868142948453> با موفقیت به بانک واریز شد.`);
 }

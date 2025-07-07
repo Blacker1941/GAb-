@@ -26,7 +26,7 @@ export async function execute(interaction) {
   const ideology = interaction.options.getString('ideology');
   const currency = interaction.options.getString('currency');
 
-  await interaction.deferReply({ ephemeral: true }); // ✅ جلوگیری از خطای تعامل
+  await interaction.deferReply({ ephemeral: true });
 
   try {
     // بررسی اونر بودن
@@ -35,13 +35,16 @@ export async function execute(interaction) {
       return await interaction.editReply({ content: '❌ فقط اونر سرور می‌تونه کشور بسازه.' });
     }
 
-    // خواندن داده
+    // خواندن فایل کشورها
     let data;
     try {
       const raw = await fs.readFile(filePath, 'utf8');
       data = JSON.parse(raw);
-    } catch {
-      data = { servers: {} };
+    } catch (err) {
+      console.error('❌ فایل countriesData.json پیدا نشد یا خراب است. ساخت کشور لغو شد.');
+      return await interaction.editReply({
+        content: '❌ فایل کشورها پیدا نشد یا خراب است. لطفاً با مدیر تماس بگیرید.'
+      });
     }
 
     // بررسی اینکه این سرور قبلاً کشور ساخته یا نه
@@ -49,13 +52,13 @@ export async function execute(interaction) {
       return await interaction.editReply({ content: '❌ این سرور قبلاً یک کشور ساخته.' });
     }
 
-    // بررسی اینکه اسم کشور تکراری نباشه
+    // بررسی تکراری نبودن نام کشور
     const isDuplicate = Object.values(data.servers).some(s => s.country === countryName);
     if (isDuplicate) {
       return await interaction.editReply({ content: '❌ کشوری با این نام قبلاً ساخته شده.' });
     }
 
-    // ذخیره کشور
+    // ذخیره کشور جدید
     data.servers[serverId] = {
       country: countryName,
       leader: userId,
@@ -65,8 +68,8 @@ export async function execute(interaction) {
         minister: 'وزیر',
         general: 'ژنرال'
       },
-      ideology: ideology,
-      currency: currency,
+      ideology,
+      currency,
       taxRate: 0.1,
       citizens: [userId],
       armySize: 0,

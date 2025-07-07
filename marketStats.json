@@ -1,0 +1,25 @@
+{
+  "gold": {
+    "buys": 742,
+    "sells": 0,
+    "momentum": 0.001605231736433104
+  },
+  "oil": {
+    "buys": 0,
+    "sells": 0,
+    "momentum": 0.012409731736433099
+  },
+  "diamond": {
+    "buys": 307,
+    "sells": 2610,
+    "momentum": 0.03818711711891519
+  },
+  "cad": {
+    "buys": 1,
+    "sells": 0
+  },
+  "lev": {
+    "buys": 651541,
+    "sells": 675784
+  }
+}

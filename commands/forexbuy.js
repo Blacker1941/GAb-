@@ -1,4 +1,3 @@
-// ✅ forexBuy command
 import { SlashCommandBuilder } from 'discord.js';
 import fs from 'fs/promises';
 import { saveMarketStats } from '../market/marketStatsHandler.js';
@@ -25,58 +24,43 @@ export async function execute(interaction, economy, saveEconomy, ensureUser, mar
     const rawMarket = await fs.readFile('market.json', 'utf8');
     const market = JSON.parse(rawMarket);
 
-    let item = itemInput;
-    let isUserNationalCurrency = false;
-    let walletKeyForNationalCurrency = null;
-
-    for (const serverId in countryData.servers) {
-      const server = countryData.servers[serverId];
-      const currencyName = server.currency?.toLowerCase();
-      const currencyImageText = server.currencyImage?.toLowerCase() || '';
-      const aliases = [currencyName];
-      if (currencyImageText.includes('|')) {
-        aliases.push(...currencyImageText.split('|').map(s => s.trim()));
-      }
-      if (aliases.includes(itemInput)) {
-        item = currencyName;
-        if (!market[item]) {
-          market[item] = {
-            price: 0.1,
-            history: [{ open: 0.1, high: 0.1, low: 0.1, close: 0.1 }]
-          };
-        }
-        if (server.citizens.includes(userId)) {
-          isUserNationalCurrency = true;
-          walletKeyForNationalCurrency = 'wallet' + serverId;
-          user[walletKeyForNationalCurrency] = user[walletKeyForNationalCurrency] || 0;
-        }
-        break;
-      }
+    if (!market[itemInput]) {
+      return await interaction.editReply({ content: '❌ چنین آیتمی در بازار نیست.', ephemeral: true });
     }
 
-    if (!market[item]) return await interaction.editReply({ content: '❌ چنین آیتمی در بازار نیست.', ephemeral: true });
+    const itemPrice = market[itemInput].price;
 
-    const itemPrice = market[item].price;
+    // مقدار خرید
     let amount = amountInput === 'all' ? Math.floor(user.wallet / itemPrice) : parseInt(amountInput);
-    if (isNaN(amount) || amount < 1 || user.wallet < amount * itemPrice)
-      return await interaction.editReply({ content: '❌ مقدار نامعتبر یا پول ناکافی.', ephemeral: true });
+    if (isNaN(amount) || amount < 1) {
+      return await interaction.editReply({ content: '❌ مقدار نامعتبر است.', ephemeral: true });
+    }
 
+    if (user.wallet < amount * itemPrice) {
+      return await interaction.editReply({ content: '❌ پول بین‌المللی کافی نیست.', ephemeral: true });
+    }
+
+    // کم کردن پول بین المللی
     user.wallet -= amount * itemPrice;
-    user.forex = user.forex || {};
-    user.forex[item] = (user.forex[item] || 0) + amount;
-    user.forexBuyInfo = user.forexBuyInfo || {};
-    user.forexBuyInfo[item] = user.forexBuyInfo[item] || { totalAmount: 0, totalSpent: 0 };
-    user.forexBuyInfo[item].totalAmount += amount;
-    user.forexBuyInfo[item].totalSpent += amount * itemPrice;
-    if (isUserNationalCurrency) user[walletKeyForNationalCurrency] = user.forex[item];
 
-    marketStats[item] = marketStats[item] || { buys: 0, sells: 0 };
-    marketStats[item].buys += amount;
+    // اضافه کردن مقدار به دارایی فارکس کاربر
+    user.forex = user.forex || {};
+    user.forex[itemInput] = (user.forex[itemInput] || 0) + amount;
+
+    // ثبت اطلاعات خرید
+    user.forexBuyInfo = user.forexBuyInfo || {};
+    user.forexBuyInfo[itemInput] = user.forexBuyInfo[itemInput] || { totalAmount: 0, totalSpent: 0 };
+    user.forexBuyInfo[itemInput].totalAmount += amount;
+    user.forexBuyInfo[itemInput].totalSpent += amount * itemPrice;
+
+    // ثبت آمار خرید
+    marketStats[itemInput] = marketStats[itemInput] || { buys: 0, sells: 0 };
+    marketStats[itemInput].buys += amount;
+
     await saveMarketStats();
     await saveEconomy();
-    await fs.writeFile('market.json', JSON.stringify(market, null, 2));
 
-    await interaction.editReply(`✅ خرید ${amount} ${item.toUpperCase()} با ${amount * itemPrice} انجام شد.`);
+    await interaction.editReply(`✅ خرید ${amount} ${itemInput.toUpperCase()} با موفقیت انجام شد و از کیف پول بین‌المللی شما کسر شد.`);
   } catch (err) {
     console.error('❌ خطا در خرید:', err);
     if (deferred) await interaction.editReply({ content: '❌ خطا در خرید.', ephemeral: true });

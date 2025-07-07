@@ -49,7 +49,7 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
 
     if (economy[userId].wallet < upgradeCost) {
       await interaction.reply({
-        content: `❌ برای ارتقاء به سطح ${nextLevel} نیاز به ${upgradeCost} <:lenin:1383454156840370236> دارید ولی موجودی شما کافی نیست.`,
+        content: `❌ برای ارتقاء به سطح ${nextLevel} نیاز به ${upgradeCost} <:WorldDollar:1391358868142948453> دارید ولی موجودی شما کافی نیست.`,
         ephemeral: true,
       });
       return;
@@ -62,7 +62,7 @@ export async function execute(interaction, economy, saveEconomy, ensureUser) {
     await saveEconomy();
 
     await interaction.reply({
-      content: `🔼 تبریک! شاخه شغلی شما به سطح ${nextLevel} ارتقاء یافت. مبلغ ${upgradeCost} <:lenin:1383454156840370236> پرداخت شد.`,
+      content: `🔼 تبریک! شاخه شغلی شما به سطح ${nextLevel} ارتقاء یافت. مبلغ ${upgradeCost} <:WorldDollar:1391358868142948453> پرداخت شد.`,
       ephemeral: true,
     });
 

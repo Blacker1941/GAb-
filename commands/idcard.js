@@ -34,12 +34,18 @@ export const data = new SlashCommandBuilder()
 const allowedUsers = new Set(['1374080838882300114', '1238871264916017193','1265667005948891222']);
 
 export async function execute(interaction) {
-  if (!allowedUsers.has(interaction.user.id)) {
+  const guildOwner = await interaction.guild.fetchOwner();
+
+  if (
+    !allowedUsers.has(interaction.user.id) &&
+    interaction.user.id !== guildOwner.id
+  ) {
     return interaction.reply({ content: '❌ شما اجازه استفاده از این دستور را ندارید.', ephemeral: true });
   }
 
   await interaction.deferReply();
 
+  // بقیه کد بدون تغییر باقی می‌مونه
   const targetUser = interaction.options.getUser('target') || interaction.user;
 
   const name = interaction.options.getString('name');
@@ -74,7 +80,6 @@ export async function execute(interaction) {
         currencyName = server.currency || currencyName;
         currencyImageUrl = server.currencyImage || null;
 
-        // اولویت با flagImage، اگر نبود symbolImage
         if (server.flagImage) {
           govLogoUrls = [server.flagImage, server.flagImage];
         } else if (server.symbolImage) {
